@@ -11,7 +11,7 @@ twitter.stream('statuses/filter', config.twitter.stream, function (stream) {
     var tweetQueue = [];
     var readyToSave = true;
 
-    stream.on('data',function (tweet) {
+    stream.on('data', function (tweet) {
         tweetQueue.push(tweet);
     });
 
@@ -30,7 +30,7 @@ twitter.stream('statuses/filter', config.twitter.stream, function (stream) {
 
             db('tweets').insert(readyTweets.map(function(tweet){
                 return {
-                    text: tweet.text,
+                    text: tweet.text.replace('@nixtrack','').trim(),
                     user_id: tweet.user.id,
                     user_screen_name: tweet.user.screen_name
                 };
