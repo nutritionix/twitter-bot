@@ -1,0 +1,17 @@
+{
+  "name": "nix-track-twitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.7.3",
+    "mysql": "^2.5.4",
+    "optimist": "^0.6.1",
+    "twitter": "^0.2.12"
+  }
+}
